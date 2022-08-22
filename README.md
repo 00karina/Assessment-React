@@ -1,7 +1,7 @@
 # <img src="https://media-exp1.licdn.com/dms/image/C560BAQFFB5MAXrtEiQ/company-logo_200_200/0/1659437242707?e=1669248000&v=beta&t=t4-wDGSdhVcLz_6iELwGf3eCpJIh-c8SBVG4CRLGxJE" alt="alt text" width="50" height="50">                  Xabit Technical Assessment Question and Answer
 
 
-## Your React application is rendering a page very slowly. How are you going to investigate and/or fix the issue
+## 1. Your React application is rendering a page very slowly. How are you going to investigate and/or fix the issue
 
 
 
@@ -12,7 +12,7 @@ I would start by identifying the root cause of the issue. It may be caused by ad
 
 
 
-## What is the difference between filter and map?
+## 2. What is the difference between filter and map?
 
 ### Filter
 
