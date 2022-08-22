@@ -1,74 +1,63 @@
-# Getting Started with Create React App
+# <img src="https://media-exp1.licdn.com/dms/image/C560BAQFFB5MAXrtEiQ/company-logo_200_200/0/1659437242707?e=1669248000&v=beta&t=t4-wDGSdhVcLz_6iELwGf3eCpJIh-c8SBVG4CRLGxJE" alt="alt text" width="50" height="50">                  Xabit Technical Assessment Question and Answer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Your React application is rendering a page very slowly. How are you going to investigate and/or fix the issue
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+I would start by identifying the root cause of the issue. It may be caused by adding too many components into a single bundle file, the loading of that bundle file might take more time. Another reason for slow rendering is caused due to Analytics tracking libraries, excessive CSS animations,non-optimized images, iframes, and many more. I had faced this issue before. I solved it using useMemo hooks. It helps to memorize the value between renders and helps to prevent re-rendering on React function components. To solve this kind of problem my first prospect is research. We need to structure our components in an optimized way. Using tools like react developer tools and Chrome DevTools Performance helps to debug these issues. 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## What is the difference between filter and map?
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Filter
 
-### `npm run eject`
+A filter is a process of looping through an array and including or excluding elements inside that array based on a condition that is provided.
+For example
+const names = ['James', 'John', 'Paul', 'Rina', 'Geo'];
+function App() {
+ return ( <div> 
+{names.filter(name => name.includes('J')).map(filteredName => ( <li> {filteredName} </li> ))}
+ </div> ); 
+}
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+`Result: James, John`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Here, using filter only the people name which includes j is displayed.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+ ### Map
+ 
+The map function is used to iterate over an array and manipulate or change data items. 
+const names = ['James', 'John', 'Paul', 'Rina', 'Geo'];
+function App() {
+ return ( <div> 
+{names.map(peopleName => ( <li> {peopleName } </li> ))}
+ </div> ); 
+}
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+`Result: James, John, Paul, Rina, Geo`
 
-## Learn More
+Here, using the map method all data are iterated and displayed.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 3. What technical aspects of React do you struggle with?
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+I realized that it is not sufficient to learn the react only as it is just a UI library
+ which is rarely enough and is never sufficient when the application grows complex. Using
+ React JS alone for that purpose will only result in a bloated codebase that will become 
+ hard to manage.
+ 
+ 
+ I had to struggle to learn reactjs and redux at the same time. I didn't have a strong foundation
+ in reactjs and I jumped into  Redux. It introduces new concepts like actions, dispatch, reducers,
+and store, which makes it more complicated.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# React-Assesment-
-# React_Aseesement
-# React_Aseesement
-# Assessment-React
+Wasted renders are one of the most common React JS problems I have faced which caused slow down the performance.
+While working in a team, We need to choose a single version of react component. If any member  contrast that with web components, for instance, there may be version conflicts.
