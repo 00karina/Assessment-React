@@ -8,7 +8,7 @@
 I would start by identifying the root cause of the issue. It may be caused by adding too many components into a single bundle file, the loading of that bundle file might take more time. Another reason for slow rendering is caused due to Analytics tracking libraries, excessive CSS animations,non-optimized images, iframes, and many more. I had faced this issue before. I solved it using useMemo hooks. It helps to memorize the value between renders and helps to prevent re-rendering on React function components. To solve this kind of problem my first prospect is research. We need to structure our components in an optimized way. Using tools like react developer tools and Chrome DevTools Performance helps to debug these issues. 
 
                                  
-            <br /> <br />                     
+                              
                  
 
 ## 2. What is the difference between filter and map?
