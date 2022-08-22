@@ -14,7 +14,7 @@ I would start by identifying the root cause of the issue. It may be caused by ad
 
 ## 2. What is the difference between filter and map?
 
-### Filter
+#### Filter
 
 A filter is a process of looping through an array and including or excluding elements inside that array based on a condition that is provided.
 For example
@@ -29,7 +29,7 @@ function App() {
 
 Here, using filter only the people name which includes j is displayed.
 
- ### Map
+ #### Map
  
 The map function is used to iterate over an array and manipulate or change data items. 
 const names = ['James', 'John', 'Paul', 'Rina', 'Geo'];
